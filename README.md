@@ -1,0 +1,2 @@
+# Mango-Driver-Pro
+A professional dual-mode driver utility with Driver Backup/Restore and Light/Dark themes. Use Offline Mode with the built-in `Driver/` pack for speed, or switch to Online Mode to use Google AI for the latest driver updates. Features a realistic installation process with progress indicators. Supports Windows x32 &amp; x64.
