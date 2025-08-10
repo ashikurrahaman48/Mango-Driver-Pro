@@ -1,10 +1,14 @@
-
 # Changelog
 
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- **Gaming Mode:** A new one-click optimization feature to enhance system performance for gaming. It includes a dedicated UI, animations, and visual feedback when active.
 
 ## [1.0.0] - 2025-07-15
 
