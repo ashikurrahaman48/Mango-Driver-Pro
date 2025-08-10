@@ -1,0 +1,94 @@
+name: Automated Release Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      version_type:
+        description: 'Version type (major/minor/patch)'
+        required: true
+        default: 'patch'
+  push:
+    tags:
+      - 'v*.*.*'
+
+env:
+  NODE_VERSION: '22.18.0'
+  BUILD_DIR: './build/output'
+  ARTIFACT_NAME: 'MangoDriver_Pro_Installer'
+
+jobs:
+  release:
+    name: Build and Release
+    runs-on: windows-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci --ignore-scripts --omit=dev
+
+      - name: Version management
+        id: versioning
+        run: |
+          if [[ ${{ github.event_name }} == 'workflow_dispatch' ]]; then
+            npm version ${{ github.event.inputs.version_type }} --no-git-tag-version
+          fi
+          echo "VERSION=$(node -p "require('./package.json').version")" >> $GITHUB_ENV
+          echo "version=$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
+
+      - name: Build application
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test:ci
+
+      - name: Create installer
+        run: |
+          $version = ${{ env.VERSION }}
+          .\build\build.ps1 -Version $version
+        shell: pwsh
+
+      - name: Verify artifacts
+        run: |
+          if (-not (Test-Path -Path "${{ env.BUILD_DIR }}/*.exe")) {
+            Write-Error "Installer not found!"
+            exit 1
+          }
+        shell: pwsh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}_${{ env.VERSION }}
+          path: ${{ env.BUILD_DIR }}/*.exe
+          retention-days: 7
+
+      - name: Create GitHub Release
+        if: success()
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: MangoDriver Pro v${{ env.VERSION }}
+          body: |
+            ### What's New
+            - Latest features and bug fixes
+            - See CHANGELOG.md for details
+          files: ${{ env.BUILD_DIR }}/*.exe
+          prerelease: ${{ contains(env.VERSION, '-') }}
+          generate_release_notes: true
+
+      - name: Publish to npm (Optional)
+        if: ${{ !contains(env.VERSION, '-') && github.event_name == 'workflow_dispatch' }}
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
