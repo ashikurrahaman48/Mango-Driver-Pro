@@ -1,0 +1,18 @@
+# .github/ISSUE_TEMPLATE/config.yml
+
+# Disable blank issue creation
+blank_issues_enabled: false
+
+# Template selection options
+contact_links:
+  - name: "🐛 বাগ রিপোর্ট করুন (Report Bug)"
+    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=bug_report.md"
+    about: "প্রযুক্তিগত সমস্যা বা অপ্রত্যাশিত আচরণ রিপোর্ট করুন | Report technical issues"
+    
+  - name: "✨ নতুন ফিচার অনুরোধ (Request Feature)"
+    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=feature_request.md"
+    about: "নতুন ফাংশনালিটি বা উন্নয়নের পরামর্শ দিন | Suggest enhancements"
+    
+  - name: "🔒 নিরাপত্তা সমস্যা (Security Issue)"
+    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/security/policy"
+    about: "নিরাপত্তা ঝুঁকি গোপনীয়ভাবে রিপোর্ট করুন | Privately report vulnerabilities"
