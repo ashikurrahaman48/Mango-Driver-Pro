@@ -1,0 +1,42 @@
+# .github/dependabot.yml
+
+version: 2
+updates:
+  # NuGet packages for .NET
+  - package-ecosystem: "nuget"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "08:00"
+      timezone: "Asia/Dhaka"
+    open-pull-requests-limit: 3
+    reviewers:
+      - "ashikurrahaman48"
+    labels:
+      - "dependencies"
+      - "dotnet"
+    commit-message:
+      prefix: "[DEPENDABOT]"
+      prefix-development: "[DEPENDABOT-DEV]"
+
+  # GitHub Actions updates
+  - package-ecosystem: "github-actions"
+    directory: "/.github/workflows"
+    schedule:
+      interval: "monthly"
+    labels:
+      - "github-actions"
+      - "automation"
+
+  # NPM packages for any UI components (if applicable)
+  - package-ecosystem: "npm"
+    directory: "/src/MangoDriver.UI"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    allow:
+      - dependency-type: "production"
+    ignore:
+      - dependency-name: "typescript"  # Keep stable version
+      - dependency-name: "react"       # Keep stable version
