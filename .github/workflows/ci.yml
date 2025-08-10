@@ -1,0 +1,70 @@
+name: CI Pipeline | সিআই পাইপলাইন
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  DOTNET_VERSION: '8.0.x'  # .NET 8 LTS ভার্সন
+  NODE_VERSION: '20.x'     # Node.js LTS ভার্সন
+
+jobs:
+  build-and-test:
+    name: Build & Test | বিল্ড ও টেস্ট
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # ১. সোর্স কোড চেকআউট | Checkout source code
+      - name: Checkout repository | রিপোজিটরি চেকআউট
+        uses: actions/checkout@v4
+
+      # ২. .NET সেটআপ | Setup .NET
+      - name: Setup .NET ${{ env.DOTNET_VERSION }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      # ৩. Node.js সেটআপ | Setup Node.js
+      - name: Setup Node.js ${{ env.NODE_VERSION }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      # ৪. ডিপেন্ডেন্সি ইনস্টল | Install dependencies
+      - name: Install dependencies | ডিপেন্ডেন্সি ইনস্টল
+        run: |
+          dotnet restore
+          npm ci
+
+      # ৫. বিল্ড প্রজেক্ট | Build project
+      - name: Build | বিল্ড
+        run: |
+          dotnet build --configuration Release --no-restore
+          npm run build --if-present
+
+      # ৬. ইউনিট টেস্ট রান | Run unit tests
+      - name: Run tests | টেস্ট রান
+        run: |
+          dotnet test --no-build --verbosity normal
+          npm test --if-present
+
+      # ৭. কোড কভারেজ রিপোর্ট | Code coverage
+      - name: Code Coverage | কোড কভারেজ
+        if: always()
+        run: |
+          dotnet test --collect:"XPlat Code Coverage"
+          # npm run coverage --if-present
+
+      # ৮. বিল্ড আর্টিফ্যাক্ট সংরক্ষণ | Save build artifacts
+      - name: Upload artifacts | আর্টিফ্যাক্ট আপলোড
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-output
+          path: |
+            src/MangoDriver.UI/bin/Release/net8.0/
+            dist/
+          retention-days: 3
