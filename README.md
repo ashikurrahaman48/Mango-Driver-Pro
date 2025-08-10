@@ -1,18 +1,18 @@
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/ashikurrahaman48/mangodriver/main/logo.svg" alt="MangoDriver Pro Logo" width="128">
+  <img src="https://raw.githubusercontent.com/ashikurrahaman48/Mango-Driver-Pro/main/public/assets/icons/app_icon.svg" alt="MangoDriver Pro Logo" width="128">
   <h1 align="center">MangoDriver Pro</h1>
   <p align="center">
     The complete driver solution for peak system performance and stability.
     <br />
-    <a href="https://github.com/ashikurrahaman48/mangodriver/issues/new?template=bug_report.md"><strong>Report Bug</strong></a>
+    <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=bug_report.md"><strong>Report Bug</strong></a>
     ·
-    <a href="https://github.com/ashikurrahaman48/mangodriver/issues/new?template=feature_request.md"><strong>Request Feature</strong></a>
+    <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=feature_request.md"><strong>Request Feature</strong></a>
   </p>
   <p align="center">
-    <a href="https://github.com/ashikurrahaman48/mangodriver/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ashikurrahaman48/mangodriver?style=for-the-badge" alt="License"></a>
-    <a href="https://github.com/ashikurrahaman48/mangodriver/stargazers"><img src="https://img.shields.io/github/stars/ashikurrahaman48/mangodriver?style=for-the-badge&logo=github" alt="Stars"></a>
-    <a href="https://github.com/ashikurrahaman48/mangodriver/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/ashikurrahaman48/mangodriver/ci.yml?branch=main&style=for-the-badge&logo=githubactions" alt="CI Status"></a>
+    <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ashikurrahaman48/Mango-Driver-Pro?style=for-the-badge" alt="License"></a>
+    <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/stargazers"><img src="https://img.shields.io/github/stars/ashikurrahaman48/Mango-Driver-Pro?style=for-the-badge&logo=github" alt="Stars"></a>
+    <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/ashikurrahaman48/Mango-Driver-Pro/ci.yml?branch=main&style=for-the-badge&logo=githubactions" alt="CI Status"></a>
   </p>
 </div>
 
@@ -20,7 +20,7 @@
 
 ### MangoDriver Pro v1.0.0
 
-**© 2025 MangoSoft** | 🌐 [www.mangodriver.com](https://www.mangodriver.com) | 📧 [support@mangodriver.com](mailto:support@mangodriver.com) | 💻 [Star us on GitHub](https://github.com/ashikurrahaman48/mangodriver)
+**© 2025 MangoSoft** | 🌐 [www.mangodriver.com](https://www.mangodriver.com) | 📧 [support@mangodriver.com](mailto:support@mangodriver.com) | 💻 [Star us on GitHub](https://github.com/ashikurrahaman48/Mango-Driver-Pro)
 
 ---
 
@@ -34,7 +34,7 @@
 ### **About This Project**
 -   **Developed By:** Mangolab
 -   **CEO:** Ashikur Rahaman
--   **License:** [Open Source (MIT)](https://github.com/ashikurrahaman48/mangodriver/blob/main/LICENSE)
+-   **License:** [Open Source (MIT)](https://github.com/ashikurrahaman48/Mango-Driver-Pro/blob/main/LICENSE)
 -   **Socials:** [Facebook] · [Twitter] · [LinkedIn] · [YouTube]
 
 ---

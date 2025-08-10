@@ -10,7 +10,7 @@ By participating in this project, you are expected to uphold our [Code of Conduc
 ## How Can I Contribute?
 
 ### Reporting Bugs
-If you find a bug, please make sure it hasn't already been reported by checking the [Issues](https://github.com/ashikurrahaman48/mangodriver/issues). If it's a new bug, please submit a new issue using the "Bug Report" template. Be sure to include a clear title, a detailed description, and steps to reproduce the issue.
+If you find a bug, please make sure it hasn't already been reported by checking the [Issues](https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues). If it's a new bug, please submit a new issue using the "Bug Report" template. Be sure to include a clear title, a detailed description, and steps to reproduce the issue.
 
 ### Suggesting Enhancements
 If you have an idea for a new feature or an improvement to an existing one, please create an issue using the "Feature Request" template.
@@ -21,7 +21,7 @@ If you're ready to contribute code, follow these steps:
 1.  **Fork the repository** to your own GitHub account.
 2.  **Clone your fork** to your local machine:
     ```bash
-    git clone https://github.com/YourUsername/mangodriver.git
+    git clone https://github.com/YourUsername/Mango-Driver-Pro.git
     ```
 3.  **Create a new branch** for your changes. A good branch name describes the change, like `feat/add-new-theme` or `fix/scan-error-handling`.
     ```bash

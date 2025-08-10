@@ -11,6 +11,6 @@ To ensure a smooth and collaborative process, we have a central contributing gui
 
 ## Quick Links
 
--   [Issue Tracker](https://github.com/ashikurrahaman48/mangodriver/issues) - Report bugs or check existing ones.
--   [Pull Requests](https://github.com/ashikurrahaman48/mangodriver/pulls) - See open changes.
+-   [Issue Tracker](https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues) - Report bugs or check existing ones.
+-   [Pull Requests](https://github.com/ashikurrahaman48/Mango-Driver-Pro/pulls) - See open changes.
 -   [Code of Conduct](../.github/CODE_OF_CONDUCT.md) - Our community standards.

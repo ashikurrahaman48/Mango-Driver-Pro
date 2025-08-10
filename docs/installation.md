@@ -8,7 +8,7 @@ Follow these steps to install MangoDriver Pro on your Windows PC.
 This is the easiest and recommended way to get started with MangoDriver Pro.
 
 1.  **Download the Installer:**
-    -   Navigate to the [**Latest Release page**](https://github.com/ashikurrahaman48/mangodriver/releases/latest) on GitHub.
+    -   Navigate to the [**Latest Release page**](https://github.com/ashikurrahaman48/Mango-Driver-Pro/releases/latest) on GitHub.
     -   Under the "Assets" section, download the `MangoDriver_Pro_Setup_vX.X.X.exe` file (where `X.X.X` is the version number).
 
 2.  **Run the Installer:**
@@ -38,8 +38,8 @@ If you are a developer and want to build the project from the source code, follo
 2.  **Clone the Repository:**
     Open your terminal or command prompt and run the following command:
     ```bash
-    git clone https://github.com/ashikurrahaman48/mangodriver.git
-    cd mangodriver
+    git clone https://github.com/ashikurrahaman48/Mango-Driver-Pro.git
+    cd Mango-Driver-Pro
     ```
 
 3.  **Install Dependencies:**
