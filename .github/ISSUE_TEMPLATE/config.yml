@@ -1,18 +1,48 @@
 # .github/ISSUE_TEMPLATE/config.yml
 
-# Disable blank issue creation
+# Main configuration for issue templates
+name: MangoDriver Pro Issue Templates
+description: |
+  Use these templates to report issues or suggest features.
+  Please choose the appropriate template to help us address your request efficiently.
+title: "[TYPE] Issue Title"
+labels: ["needs-triage"]
+assignees: ["ashikurrahaman48"]
+
+# Template chooser configuration
 blank_issues_enabled: false
 
-# Template selection options
 contact_links:
-  - name: "🐛 বাগ রিপোর্ট করুন (Report Bug)"
-    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=bug_report.md"
-    about: "প্রযুক্তিগত সমস্যা বা অপ্রত্যাশিত আচরণ রিপোর্ট করুন | Report technical issues"
+  - name: "🐛 Bug Report"
+    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=bug_report.md&labels=bug,needs-triage"
+    about: "Report a technical issue or unexpected behavior in MangoDriver Pro"
     
-  - name: "✨ নতুন ফিচার অনুরোধ (Request Feature)"
-    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=feature_request.md"
-    about: "নতুন ফাংশনালিটি বা উন্নয়নের পরামর্শ দিন | Suggest enhancements"
+  - name: "✨ Feature Request" 
+    url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=feature_request.md&labels=enhancement,needs-review"
+    about: "Suggest an enhancement or new functionality for MangoDriver Pro"
     
-  - name: "🔒 নিরাপত্তা সমস্যা (Security Issue)"
+  - name: "🔒 Security Vulnerability"
     url: "https://github.com/ashikurrahaman48/Mango-Driver-Pro/security/policy"
-    about: "নিরাপত্তা ঝুঁকি গোপনীয়ভাবে রিপোর্ট করুন | Privately report vulnerabilities"
+    about: "Privately report security concerns (please don't disclose publicly)"
+
+# Template-specific default settings
+defaults:
+  bug_report:
+    title: "[BUG] "
+    labels: ["bug", "needs-triage"]
+    assignees: ["ashikurrahaman48"]
+    
+  feature_request:
+    title: "[FEATURE] "
+    labels: ["enhancement", "needs-review"] 
+    assignees: ["ashikurrahaman48"]
+
+# Localization support
+locales:
+  en:
+    blank_issues_enabled: false
+    description: "English language issue templates"
+    
+  bn:
+    blank_issues_enabled: false
+    description: "বাংলা ভাষার ইস্যু টেমপ্লেট"
