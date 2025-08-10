@@ -1,4 +1,3 @@
-
 export const translations = {
   en: {
     // Header & Branding
@@ -40,6 +39,20 @@ export const translations = {
     noDeviceConnected: 'No hardware monitor connected. Connect a device to see live info.',
     connectionFailed: 'Failed to connect to device.',
     connectionCancelled: 'Device connection cancelled.',
+
+    // Gaming Mode
+    gamingMode: 'Gaming Mode',
+    gamingModeTitle: 'Gaming Mode',
+    gamingModeDescription: 'Optimizing system for peak gaming performance.',
+    gamingModeOn: 'Gaming Mode: ON',
+    gamingModeOff: 'Gaming Mode: OFF',
+    closingApps: 'Closing background applications...',
+    boostingPerformance: 'Boosting core performance...',
+    optimizingNetwork: 'Optimizing network settings...',
+    optimizationComplete: 'System Optimized!',
+    gamingModeActive: 'Gaming Mode is now active!',
+    gamingModeDeactivated: 'Gaming Mode deactivated. System back to normal.',
+
 
     // Backup Modal
     backupRestore: 'Backup & Restore',
@@ -158,6 +171,19 @@ export const translations = {
     connectionFailed: 'ডিভাইসের সাথে সংযোগ করতে ব্যর্থ হয়েছে।',
     connectionCancelled: 'ডিভাইস সংযোগ বাতিল করা হয়েছে।',
     
+    // Gaming Mode
+    gamingMode: 'গেমিং মোড',
+    gamingModeTitle: 'গেমিং মোড',
+    gamingModeDescription: 'সেরা গেমিং পারফরম্যান্সের জন্য সিস্টেম অপ্টিমাইজ করা হচ্ছে।',
+    gamingModeOn: 'গেমিং মোড: চালু',
+    gamingModeOff: 'গেমিং মোড: বন্ধ',
+    closingApps: 'ব্যাকগ্রাউন্ড অ্যাপ্লিকেশন বন্ধ করা হচ্ছে...',
+    boostingPerformance: 'কোর পারফরম্যান্স বৃদ্ধি করা হচ্ছে...',
+    optimizingNetwork: 'নেটওয়ার্ক সেটিংস অপ্টিমাইজ করা হচ্ছে...',
+    optimizationComplete: 'সিস্টেম অপ্টিমাইজড!',
+    gamingModeActive: 'গেমিং মোড এখন সক্রিয়!',
+    gamingModeDeactivated: 'গেমিং মোড নিষ্ক্রিয় করা হয়েছে। সিস্টেম স্বাভাবিক অবস্থায় ফিরে এসেছে।',
+
     // Backup Modal
     backupRestore: 'ব্যাকআপ ও রিস্টোর',
     createBackup: 'ব্যাকআপ তৈরি করুন',
