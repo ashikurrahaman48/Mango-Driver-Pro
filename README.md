@@ -1,9 +1,8 @@
-
 <div align="center">
   <img src="https://raw.githubusercontent.com/ashikurrahaman48/Mango-Driver-Pro/main/public/assets/icons/app_icon.svg" alt="MangoDriver Pro Logo" width="128">
   <h1 align="center">MangoDriver Pro</h1>
   <p align="center">
-    The complete driver solution for peak system performance and stability.
+    The complete driver solution for peak system performance and stability, now with Gaming Mode!
     <br />
     <a href="https://github.com/ashikurrahaman48/Mango-Driver-Pro/issues/new?template=bug_report.md"><strong>Report Bug</strong></a>
     ·
